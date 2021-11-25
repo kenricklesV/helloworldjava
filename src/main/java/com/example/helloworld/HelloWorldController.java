@@ -11,9 +11,8 @@ public class HelloWorldController {
     // helloworld()
     @GetMapping("/helloworld")
     public String helloWorld(@RequestParam(name = "name", required = false, defaultValue = "User") String name,
-            Model model, View view) {
+            Model model) {
         model.addAttribute("name", name);
-        view.setViewName("helloworld");
-        return "helloWorld";
+        return "helloworld";
     }
 }
